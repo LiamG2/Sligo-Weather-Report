@@ -21,4 +21,4 @@ value = st.slider("Select a value", 0, 100, 25)
 st.write("Selected value:", value)
 
 
-st.image("sunrise.jpg", caption="Sunrise by the mountains")
+st.image("thumb.jpg", caption="Sunrise by the mountains")
