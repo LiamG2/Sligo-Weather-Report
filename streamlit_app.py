@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 
 st.text("# 🤹 CADNurd's First Web App")
+st.write("# 🤹 CADNurd's First Web App")
 st.text("""I have absolutely no idea what I'm doing . . . but what's 
 the worst that could happen?"""
 )
