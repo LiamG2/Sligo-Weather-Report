@@ -20,7 +20,5 @@ st.dataframe(df)
 value = st.slider("Select a value", 0, 100, 25)
 st.write("Selected value:", value)
 
-HORIZONTAL_RED = "images/horizontal_red.png"
-ICON_RED = "images/icon_red.png"
-HORIZONTAL_BLUE = "images/horizontal_blue.png"
-ICON_BLUE = "images/icon_blue.png"
+
+st.image("sunrise.jpg", caption="Sunrise by the mountains")
