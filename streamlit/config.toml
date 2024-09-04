@@ -2,5 +2,5 @@
 showErrorDetails = false
 
 [theme]
-primaryColor = "#F63366"
-backgroundColor = "yellow"
+base="dark"
+font="serif"
