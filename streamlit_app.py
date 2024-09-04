@@ -20,4 +20,4 @@ st.dataframe(df)
 value = st.slider("Select a value", 0, 100, 25)
 st.write("Selected value:", value)
 
-st.image("thumb.jpg", caption="Sunrise by the mountains")
+st.image("images/thumb.jpg", caption="Sunrise by the mountains")
