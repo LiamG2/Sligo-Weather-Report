@@ -3,7 +3,7 @@ import pandas as pd
 
 st.text("# 🤹 CADNurd's First Web App")
 st.write("# 🤹 CADNurd's First Web App")
-st.write("I have absolutely no idea what I'm doing . . . but what's the worst that could happen?")
+st.write("I have absolutel no idea what I'm doing . . . but what's the worst that could happen?")
 
 # Title of the app
 st.markdown("### Sample App Template")
