@@ -1,6 +1,0 @@
-[client]
-showErrorDetails = false
-
-[theme]
-base="dark"
-font="serif"
