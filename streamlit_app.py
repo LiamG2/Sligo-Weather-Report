@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.markdown("🤹 CADNurd's First Web App")
+st.markdown("# 🤹 CADNurd's First Web App")
 st.text("""I have absolutely no idea what I'm doing . . . but what's 
 the worst that could happen?"""
 )
