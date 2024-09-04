@@ -3,7 +3,7 @@ import pandas as pd
 
 st.title("🤹 CADNurd's First Web App")
 st.text("""I have absolutely no idea what I'm doing . . . but what's 
-the worst thatt could happen?"""
+the worst that could happen?"""
 )
 
 # Title of the app
