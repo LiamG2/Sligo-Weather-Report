@@ -18,6 +18,6 @@ st.dataframe(df)
 
 # Slider example
 value = st.slider("Select a value", 0, 100, 25)
-st.write("Desire for tea:", value)
+st.write("Desire for tea:", value, "%")
 
 st.image("thumb.jpg", caption="")
