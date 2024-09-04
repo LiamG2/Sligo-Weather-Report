@@ -8,7 +8,7 @@ the worst that could happen?"""
 )
 
 # Title of the app
-st.title("Sample App Template")
+st.markdown("# Sample App Template")
 
 # Display a dataframe
 df = pd.DataFrame({
