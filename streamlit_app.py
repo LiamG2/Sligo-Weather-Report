@@ -42,9 +42,11 @@ def fetch_and_parse_xml(url):
 st.title("Irish County Weather Forecast")
 st.write("This app fetches and displays the latest weather forecast for Irish counties.")
 
+
 try:
-    # Fetch and display data
+    st.write("Fetching XML data...")
     df = fetch_and_parse_xml(XML_URL)
     st.dataframe(df)
 except Exception as e:
-    st.error(f"Failed to fetch or parse XML data: {e}")
+    st.error(f"Error: {e}")
+    st.write(f"Failed to fetch or parse XML data: {e}")
