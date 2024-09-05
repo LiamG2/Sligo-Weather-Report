@@ -18,12 +18,12 @@ def fetch_and_parse_xml(url):
     # Prepare data for DataFrame
     data = []
     for county in root.findall('.//county'):
-        # Extract relevant information
-        county_name = county.find('name').text
-        province = county.find('province').text
-        today_forecast = county.find('today').text
-        tonight_forecast = county.find('tonight').text
-        tomorrow_forecast = county.find('tomorrow').text
+        # Extract relevant information with checks
+        county_name = county.find('name').text if county.find('name') is not None else 'N/A'
+        province = county.find('province').text if county.find('province') is not None else 'N/A'
+        today_forecast = county.find('today').text if county.find('today') is not None else 'N/A'
+        tonight_forecast = county.find('tonight').text if county.find('tonight') is not None else 'N/A'
+        tomorrow_forecast = county.find('tomorrow').text if county.find('tomorrow') is not None else 'N/A'
 
         # Append data to the list
         data.append({
