@@ -4,7 +4,7 @@ import requests
 import xml.etree.ElementTree as ET
 
 # Define the URL of the XML file
-XML_URL = 'https://example.com/data.xml'  # Replace with the actual URL
+XML_URL = 'https://www.met.ie/Open_Data/xml/county_forecast.xml'  # Replace with the actual URL
 
 @st.cache_data(ttl=60)
 def fetch_and_parse_xml(url):
