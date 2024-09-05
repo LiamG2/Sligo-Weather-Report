@@ -4,7 +4,7 @@ import requests
 import xml.etree.ElementTree as ET
 
 # Define the URL of the XML file
-XML_URL = 'https://www.met.ie/Open_Data/xml/county_forecast.xml'  # Replace with the actual URL
+XML_URL = 'https://www.met.ie/Open_Data/xml/county_forecast.xml'
 
 @st.cache_data(ttl=60)
 def fetch_and_parse_xml(url):
@@ -15,19 +15,32 @@ def fetch_and_parse_xml(url):
     # Parse the XML content
     root = ET.fromstring(response.content)
 
-    # Convert XML data to a list of dictionaries
+    # Prepare data for DataFrame
     data = []
-    for item in root.findall('.//record'):  # Adjust based on the XML structure
-        record = {child.tag: child.text for child in item}
-        data.append(record)
+    for county in root.findall('.//county'):
+        # Extract relevant information
+        county_name = county.find('name').text
+        province = county.find('province').text
+        today_forecast = county.find('today').text
+        tonight_forecast = county.find('tonight').text
+        tomorrow_forecast = county.find('tomorrow').text
+
+        # Append data to the list
+        data.append({
+            'County': county_name,
+            'Province': province,
+            'Today': today_forecast,
+            'Tonight': tonight_forecast,
+            'Tomorrow': tomorrow_forecast
+        })
 
     # Convert the list of dictionaries to a DataFrame
     df = pd.DataFrame(data)
     return df
 
 # Streamlit app layout
-st.title("Live XML Data Viewer")
-st.write("This app fetches and displays data from an external XML source.")
+st.title("Irish County Weather Forecast")
+st.write("This app fetches and displays the latest weather forecast for Irish counties.")
 
 try:
     # Fetch and display data
