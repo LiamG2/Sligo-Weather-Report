@@ -46,7 +46,7 @@ def parse_with_pandas(xml_data):
     except Exception as e:
         st.error(f"pandas read_xml failed: {e}")
         return pd.DataFrame()
-'''
+
 
 # Method 3: Using lxml
 def parse_with_lxml(xml_data):
@@ -68,6 +68,7 @@ def parse_with_lxml(xml_data):
             'Tomorrow': tomorrow_forecast
         })
     return pd.DataFrame(data)
+'''
 
 # Method 4: Using xmltodict
 def parse_with_xmltodict(xml_data):
