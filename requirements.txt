@@ -1,2 +1,7 @@
 streamlit
 bs4
+pandas
+requests
+xml.etree.ElementTree
+lxml
+xmltodict
