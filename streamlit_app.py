@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import requests
-import xml.etree.ElementTree as ET
+# import xml.etree.ElementTree as ET
 from lxml import etree
 import xmltodict
 from bs4 import BeautifulSoup
