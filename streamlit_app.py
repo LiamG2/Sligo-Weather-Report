@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import requests
 import xml.etree.ElementTree as ET
-from lxml import etree
+# from lxml import etree
 import xmltodict
 from bs4 import BeautifulSoup
 
@@ -15,7 +15,7 @@ def fetch_xml_data(url):
     response = requests.get(url)
     response.raise_for_status()  # Check for request errors
     return response.content
-'''
+
 # Method 1: Using xml.etree.ElementTree
 def parse_with_elementtree(xml_data):
     """Parse XML using xml.etree.ElementTree."""
@@ -47,7 +47,7 @@ def parse_with_pandas(xml_data):
         st.error(f"pandas read_xml failed: {e}")
         return pd.DataFrame()
 
-
+'''
 # Method 3: Using lxml
 def parse_with_lxml(xml_data):
     """Parse XML using lxml."""
