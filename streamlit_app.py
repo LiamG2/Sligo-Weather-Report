@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import requests
 # import xml.etree.ElementTree as ET
-from lxml import etree
+# from lxml import etree
 import xmltodict
 from bs4 import BeautifulSoup
 
@@ -15,7 +15,7 @@ def fetch_xml_data(url):
     response = requests.get(url)
     response.raise_for_status()  # Check for request errors
     return response.content
-
+'''
 # Method 1: Using xml.etree.ElementTree
 def parse_with_elementtree(xml_data):
     """Parse XML using xml.etree.ElementTree."""
@@ -35,7 +35,7 @@ def parse_with_elementtree(xml_data):
             'Tomorrow': tomorrow_forecast
         })
     return pd.DataFrame(data)
-
+'''
 
 # Method 2: Using pandas read_xml
 def parse_with_pandas(xml_data):
@@ -47,7 +47,7 @@ def parse_with_pandas(xml_data):
         st.error(f"pandas read_xml failed: {e}")
         return pd.DataFrame()
 
-
+'''
 # Method 3: Using lxml
 def parse_with_lxml(xml_data):
     """Parse XML using lxml."""
@@ -68,7 +68,7 @@ def parse_with_lxml(xml_data):
             'Tomorrow': tomorrow_forecast
         })
     return pd.DataFrame(data)
-
+'''
 
 # Method 4: Using xmltodict
 def parse_with_xmltodict(xml_data):
