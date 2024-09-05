@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 import xml.etree.ElementTree as ET
 # from lxml import etree
-import xmltodict
+# import xmltodict
 from bs4 import BeautifulSoup
 
 # Define the URL of the XML file
@@ -69,7 +69,7 @@ def parse_with_lxml(xml_data):
         })
     return pd.DataFrame(data)
 '''
-
+'''
 # Method 4: Using xmltodict
 def parse_with_xmltodict(xml_data):
     """Parse XML using xmltodict."""
@@ -89,7 +89,7 @@ def parse_with_xmltodict(xml_data):
     except Exception as e:
         st.error(f"xmltodict failed: {e}")
         return pd.DataFrame()
-
+'''
 # Method 5: Using BeautifulSoup
 def parse_with_beautifulsoup(xml_data):
     """Parse XML using BeautifulSoup."""
