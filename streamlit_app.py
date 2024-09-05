@@ -35,7 +35,7 @@ def parse_with_elementtree(xml_data):
             'Tomorrow': tomorrow_forecast
         })
     return pd.DataFrame(data)
-'''
+
 
 # Method 2: Using pandas read_xml
 def parse_with_pandas(xml_data):
@@ -46,6 +46,7 @@ def parse_with_pandas(xml_data):
     except Exception as e:
         st.error(f"pandas read_xml failed: {e}")
         return pd.DataFrame()
+'''
 
 # Method 3: Using lxml
 def parse_with_lxml(xml_data):
