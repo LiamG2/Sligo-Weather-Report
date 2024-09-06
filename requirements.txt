@@ -1,5 +1,2 @@
 streamlit
-bs4
-pandas
-requests
 xmltodict
