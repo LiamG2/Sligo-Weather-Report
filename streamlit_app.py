@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import requests
 import xml.etree.ElementTree as ET
-from lxml import etree
+# from lxml import etree
 import xmltodict
 from bs4 import BeautifulSoup
 
@@ -47,7 +47,7 @@ def parse_with_pandas(xml_data):
         st.error(f"pandas read_xml failed: {e}")
         return pd.DataFrame()
 
-
+'''
 # Method 3: Using lxml
 def parse_with_lxml(xml_data):
     """Parse XML using lxml."""
@@ -68,7 +68,7 @@ def parse_with_lxml(xml_data):
             'Tomorrow': tomorrow_forecast
         })
     return pd.DataFrame(data)
-
+'''
 
 # Method 4: Using xmltodict
 def parse_with_xmltodict(xml_data):
@@ -120,13 +120,13 @@ st.subheader("Method 1: xml.etree.ElementTree")
 df1 = parse_with_elementtree(xml_data)
 st.dataframe(df1)
 
-# st.subheader("Method 2: pandas read_xml")
-# df2 = parse_with_pandas(xml_data)
-# st.dataframe(df2)
+st.subheader("Method 2: pandas read_xml")
+df2 = parse_with_pandas(xml_data)
+st.dataframe(df2)
 
-st.subheader("Method 3: lxml")
-df3 = parse_with_lxml(xml_data)
-st.dataframe(df3)
+# st.subheader("Method 3: lxml")
+# df3 = parse_with_lxml(xml_data)
+# st.dataframe(df3)
 
 st.subheader("Method 4: xmltodict")
 df4 = parse_with_xmltodict(xml_data)
