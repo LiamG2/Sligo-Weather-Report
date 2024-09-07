@@ -9,4 +9,4 @@ url = "https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdao
 conn = st.connection("gsheets", type=GSheetsConnection)
 
 data = conn.read(spreadsheet=url, usecols=[0, 1])
-st.dataframe(data)
+st.dataframe(data, width=800)
