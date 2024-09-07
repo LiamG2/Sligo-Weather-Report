@@ -8,7 +8,7 @@ response = requests.get(url)
 data = response.json()
 
 # Convert the JSON data to a DataFrame
-df = pd.json_normalize(data['connacht'])
+df = pd.json_normalize(data['Connacht'])
 
 # Display the DataFrame in a tabulated format
 st.write("Connacht Weather Forecast Data")
