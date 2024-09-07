@@ -1,20 +1,12 @@
+# example/st_app.py
+# source >>> https://github.com/streamlit/gsheets-connection
+
 import streamlit as st
-import requests
-import pandas as pd
-import json
+from streamlit_gsheets import GSheetsConnection
 
-# Fetch the JSON data from the URL
-url = "https://www.met.ie/Open_Data/json/Connacht.json"
-response = requests.get(url)
-data = response.json()
+url = "https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdaoJDI0fnqIHA/edit?usp=sharing"
 
-# Extract relevant data from the parsed JSON
-# Adjust this extraction based on your JSON structure
-forecasts = data.get('forecast', [])
+conn = st.connection("gsheets", type=GSheetsConnection)
 
-# Convert the extracted data into a DataFrame
-df = pd.json_normalize(forecasts)
-
-# Display the DataFrame in a tabulated format
-st.write("Weather Forecast Data")
-st.dataframe(df)
+data = conn.read(spreadsheet=url, usecols=[0, 1])
+st.dataframe(data)
