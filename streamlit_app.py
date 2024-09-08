@@ -20,6 +20,13 @@ streamlit_app_path,
 '''
 #### test snippet ends
 
+st.set_page_config(
+  page_title="MYSNOWSIGHT",
+  page_icon="  ",
+  layout="wide",
+  initial_sidebar_state="expanded",
+) 
+
 # number seconds to pause before spreadsheet data refresh
 # set to 10 during testing and 300 (5mins) at all other times
 pause = 10
