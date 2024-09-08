@@ -1,5 +1,4 @@
-# example/st_app.py
-# source >>> https://github.com/streamlit/gsheets-connection
+# initial source >>> https://github.com/streamlit/gsheets-connection
 
 import streamlit as st
 from streamlit_gsheets import GSheetsConnection
