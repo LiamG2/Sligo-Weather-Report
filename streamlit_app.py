@@ -8,10 +8,12 @@
 import streamlit as st
 from streamlit_gsheets import GSheetsConnection
 
+# seconds to pause before data refresh
+pause = 10 
 
 url = "https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdaoJDI0fnqIHA/edit?usp=sharing"
 
 conn = st.connection("gsheets", type=GSheetsConnection)
 
-data = conn.read(spreadsheet=url, ttl=10, usecols=[0])
+data = conn.read(spreadsheet=url, ttl=pause, usecols=[0])
 st.table(data)
