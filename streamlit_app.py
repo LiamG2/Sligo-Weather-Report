@@ -13,8 +13,9 @@ from streamlit_gsheets import GSheetsConnection
 pause = 10
 
 url_1 = "https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdaoJDI0fnqIHA/edit?usp=sharing"
+url_2 = "https://docs.google.com/spreadsheets/d/1f7NJT3M5ANzR0TbiHawhuUCGYSo3MC7HtzoRPq6tV00/edit?usp=sharing"
 
 conn = st.connection("gsheets", type=GSheetsConnection)
 
-data = conn.read(spreadsheet=url_1, ttl=pause, usecols=[0])
-st.table(data)
+data_1 = conn.read(spreadsheet=url_1, ttl=pause, usecols=[0])
+st.table(data_1)
