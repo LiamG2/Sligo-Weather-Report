@@ -13,7 +13,7 @@ streamlit_app_path,
 “–theme.primaryColor=#d7ffcd”,
 “–theme.secondaryBackgroundColor=#373737”,
 “–theme.textColor=#E8E8E8”,
-“–theme.font='sans serif'”
+“–theme.font='sans serif'"
 ]
 # test snippet ends
 
