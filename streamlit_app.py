@@ -5,6 +5,7 @@ from streamlit_gsheets import GSheetsConnection
 
 # disable delete snippet below if problems
 #### test snippet starts
+'''
 sys.argv = [
 “streamlit”,
 “run”,
@@ -16,6 +17,7 @@ streamlit_app_path,
 “–theme.textColor=#E8E8E8”,
 “–theme.font='sans serif'"
 ]
+'''
 #### test snippet ends
 
 # number seconds to pause before spreadsheet data refresh
