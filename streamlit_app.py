@@ -3,30 +3,7 @@
 import streamlit as st
 from streamlit_gsheets import GSheetsConnection
 
-# disable delete snippet below if problems
-#### test snippet starts
-'''
-sys.argv = [
-“streamlit”,
-“run”,
-streamlit_app_path,
-“–global.developmentMode=false”,
-“–theme.backgroundColor=#2C2C2C”,
-“–theme.primaryColor=#d7ffcd”,
-“–theme.secondaryBackgroundColor=#373737”,
-“–theme.textColor=#E8E8E8”,
-“–theme.font='sans serif'"
-]
 
-#### test snippet ends
-
-st.set_page_config(
-  page_title="MYSNOWSIGHT",
-  page_icon="  ",
-  layout="wide",
-  initial_sidebar_state="expanded",
-) 
-'''
 # number seconds to pause before spreadsheet data refresh
 # set to 10 during testing and 300 (5mins) at all other times
 pause = 10
