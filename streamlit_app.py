@@ -8,7 +8,7 @@
 import streamlit as st
 from streamlit_gsheets import GSheetsConnection
 
-# number seconds to pause before data refresh
+# number seconds to pause before spreadsheet data refresh
 # set to 10 during testing and 300 (5mins) at all other times
 pause = 300
 
