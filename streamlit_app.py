@@ -17,7 +17,7 @@ streamlit_app_path,
 “–theme.textColor=#E8E8E8”,
 “–theme.font='sans serif'"
 ]
-'''
+
 #### test snippet ends
 
 st.set_page_config(
@@ -26,7 +26,7 @@ st.set_page_config(
   layout="wide",
   initial_sidebar_state="expanded",
 ) 
-
+'''
 # number seconds to pause before spreadsheet data refresh
 # set to 10 during testing and 300 (5mins) at all other times
 pause = 10
