@@ -3,6 +3,7 @@
 import streamlit as st
 from streamlit_gsheets import GSheetsConnection
 
+# test snippet starts
 sys.argv = [
 “streamlit”,
 “run”,
@@ -14,6 +15,7 @@ streamlit_app_path,
 “–theme.textColor=#E8E8E8”,
 “–theme.font='sans serif'”
 ]
+# test snippet ends
 
 # number seconds to pause before spreadsheet data refresh
 # set to 10 during testing and 300 (5mins) at all other times
