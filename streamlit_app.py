@@ -14,4 +14,4 @@ url = "https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdao
 conn = st.connection("gsheets", type=GSheetsConnection)
 
 data = conn.read(spreadsheet=url, ttl=10, usecols=[0])
-st.table(data, width=300, height=500)
+st.table(data) # , width=300, height=500)
