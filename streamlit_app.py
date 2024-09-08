@@ -8,8 +8,9 @@
 import streamlit as st
 from streamlit_gsheets import GSheetsConnection
 
-# seconds to pause before data refresh
-pause = 100 
+# number seconds to pause before data refresh
+# set to 10 during testing and 300 (5mins) at all other times
+pause = 10
 
 url = "https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdaoJDI0fnqIHA/edit?usp=sharing"
 
