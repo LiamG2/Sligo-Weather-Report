@@ -15,7 +15,3 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 
 data = conn.read(spreadsheet=url, ttl=10, usecols=[0])
 st.table(data)
-st.write(" ")
-st.write(" ")
-st.write(" ")
-st.table(data)
