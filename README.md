@@ -2,7 +2,7 @@
 
 Simple overview of use/purpose.
 
-https://example.com](https://sligo-weather.streamlit.app/
+https://sligo-weather.streamlit.app
 
 ## Description
 
