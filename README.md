@@ -2,7 +2,7 @@
 
 A basic Web App which automatically updates itself (every 10 mins) with the latest weather reports relevant to the town/city of Sligo in Ireland. See link below.
 
-Up, running and hosted for free at >> https://sligo-weather.streamlit.app
+Up, running and hosted for free at >> https://sligo-weather-report.streamlit.app
 
 ## Description
 
