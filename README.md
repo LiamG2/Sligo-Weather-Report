@@ -6,7 +6,7 @@ https://sligo-weather.streamlit.app
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+Currently scrapes data from met.ie - which unfortunately does not provide short, text-only weather reports for individual towns. Sligo sits on the border between two provinces, Connaught and Ulster, so for now 
 
 <!---
 
