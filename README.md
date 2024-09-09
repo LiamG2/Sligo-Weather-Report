@@ -1,6 +1,6 @@
-# Basic Web App which automatically updates itself with the latest weather reports
+# Basic Web App - exploring Python-Only Frameworks
 
-Simple overview of use/purpose.
+Basic Web App which automatically updates itself (every 10 mins) with the latest weather reports relevant to the town/city of Sligo in Ireland. See link below.
 
 https://sligo-weather.streamlit.app
 
