@@ -1,4 +1,4 @@
-# Project Title
+# Basic Web App which automatically updates itself with the latest weather reports
 
 Simple overview of use/purpose.
 
