@@ -7,6 +7,7 @@ from streamlit_gsheets import GSheetsConnection
 # number seconds to pause before spreadsheet data refresh
 # set to 10 during testing and 300 (5mins) at all other times
 pause = 30
+
 url_1 = "https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdaoJDI0fnqIHA/edit?usp=sharing"
 url_2 = "https://docs.google.com/spreadsheets/d/1f7NJT3M5ANzR0TbiHawhuUCGYSo3MC7HtzoRPq6tV00/edit?usp=sharing"
 
