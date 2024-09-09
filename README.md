@@ -8,6 +8,9 @@ Up, running and hosted for free at >> https://sligo-weather.streamlit.app
 
 Currently scrapes data from https://www.met.ie/ - which unfortunately does not provide short, text-only weather reports for individual towns. Sligo sits on the border between two provinces, Connaught and Ulster, so for now I'll leave it as is, showing the most up-to-date reports for those two provinces. Completely *re-inventing-the-wheel* here, but it works, and I'm proud of it :)
 
+
+Try $^{your text}$ for superscript - $_{more text}$ for subscript
+
 <!---
 
 ## Getting Started
