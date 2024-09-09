@@ -15,7 +15,7 @@ conn = st.connection("gsheets", type=GSheetsConnection)
 
 data_1 = conn.read(spreadsheet=url_1, ttl=pause, usecols=[0])
 data_2 = conn.read(spreadsheet=url_2, ttl=pause, usecols=[0])
-st.header("Connaught 1")
+st.header("Connaught")
 st.table(data_1)
 st.header("Ulster")
 st.table(data_2)
