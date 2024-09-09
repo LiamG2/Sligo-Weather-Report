@@ -8,8 +8,10 @@ https://sligo-weather.streamlit.app
 
 An in-depth paragraph about your project and overview of use.
 
-## Getting Started
+<!---
 
+## Getting Started
+```
 ### Dependencies
 
 * Describe any prerequisites, libraries, OS version, etc., needed before installing program.
@@ -58,3 +60,5 @@ This project is licensed under the [NAME HERE] License - see the LICENSE.md file
 
 Inspiration, code snippets, etc.
 . . .
+
+-->
