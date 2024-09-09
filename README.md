@@ -4,7 +4,7 @@ A basic Web App which automatically updates itself (every 10 mins) with the late
 
 Up, running and hosted for free at >> https://sligo-weather.streamlit.app
 
-$^{your\ text}$
+$^{Note\ to\ self:\ Do\ NOT\ re-name\ this\ repo\ if\ still\ using\ Streamlit\ -\ it\ won't\ like\ that.}$
 
 ## Description
 
