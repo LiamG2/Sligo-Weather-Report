@@ -4,9 +4,9 @@ A basic Web App which automatically updates itself (every 10 mins) with the late
 
 Up, running and hosted for free at >> https://sligo-weather.streamlit.app
 
-$^{Note\ to\ self:\ Do\ NOT\ re-name\ this\ repo\ if\ still\ using\ Streamlit\ -\ it\ won't\ like\ that.}$
-
 ## Description
+
+$^{Note\ to\ self:\ Do\ NOT\ rename\ this\ repo\ if\ still\ using\ Streamlit\ -\ it\ won't\ like\ that.}$
 
 Currently scrapes data from https://www.met.ie/ - which unfortunately does not provide short, text-only weather reports for individual towns. Sligo sits on the border between two provinces, Connaught and Ulster, so for now I'll leave it as is, showing the most up-to-date reports for those two provinces. Completely *re-inventing-the-wheel* here, but it works, and I'm proud of it :)
 
