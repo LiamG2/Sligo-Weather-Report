@@ -1,9 +1,7 @@
 # Project Title
 
 Simple overview of use/purpose.
-```
-[Sligo Weather]([https://example.com](https://sligo-weather.streamlit.app/))_
-```
+
 https://example.com](https://sligo-weather.streamlit.app/
 
 ## Description
