@@ -13,7 +13,7 @@ url_2 = "https://docs.google.com/spreadsheets/d/1f7NJT3M5ANzR0TbiHawhuUCGYSo3MC7
 
 conn = st.connection("gsheets", type=GSheetsConnection)
 
-data_1 = conn.read(spreadsheet=url_1, ttl=pause, usecols=[0], nrows=1,)
+data_1 = conn.read(spreadsheet=url_1, ttl=pause, usecols=[0], nrows=0,)
 data_2 = conn.read(spreadsheet=url_2, ttl=pause, usecols=[0])
 st.header("Connaught")
 st.table(data_1)
