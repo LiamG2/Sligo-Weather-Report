@@ -5,16 +5,17 @@ from streamlit_lottie import st_lottie
 
 lottie_polyfox_1 = ('https://raw.githubusercontent.com/LiamG2/Sligo-Weather-Report/refs/heads/main/file.json') # PEP-8 Length N/A
 
-
 # set sidebar initial state
 st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-add_selectbox = st.sidebar.selectbox(
-    "How would you like to be contacted?",
-    ("Email", "Home phone", "Mobile phone")
-)
+# method for adding widgets/lotties to sidebar
+with st.sidebar:
+    st_lottie(lottie_polyfox_1, height=200, key='polyfox_1')
+    # note different 'key' name above, needed when using same animation
+    # \multiple times
+
 
 # link to test GSheet >> https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdaoJDI0fnqIHA/edit?usp=sharing
 
