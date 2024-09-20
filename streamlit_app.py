@@ -41,5 +41,5 @@ cellContents = cellContents.replace('\\n', '')
 
 st.title("Sligo Weather")
 st.write()
-st.write("# title")
+st.write("## Today's Weather for both Sligo and the rest of Connacht")
 st.write(cellContents)
