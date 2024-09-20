@@ -1,5 +1,6 @@
 import streamlit as st
 import gspread
+from streamlit_lottie import st_lottie
 # import time
 
 # set sidebar initial state
