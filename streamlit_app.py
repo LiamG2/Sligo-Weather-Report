@@ -40,5 +40,6 @@ cellContents = cellContents.strip("[]'")
 cellContents = cellContents.replace('\\n', '')
 
 st.title("Sligo Weather")
-
+st.write()
+st.write("# title")
 st.write(cellContents)
