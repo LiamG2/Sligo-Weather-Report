@@ -31,7 +31,7 @@ public_sheet = gApiKey.open_by_url(
 # convert gspread output to plain string
 today_Wthr = str((public_sheet.sheet1.get('A5')))
 tonight_Wthr = str((public_sheet.sheet1.get('A8')))
-tomorrow_Wthr = str((public_sheet.sheet1.get('A8')))
+tomorrow_Wthr = str((public_sheet.sheet1.get('A11')))
 
 # remove unnecessary chars [ ] ' from both string's ends
 today_Wthr = today_Wthr.strip("[]'")
