@@ -2,7 +2,7 @@ import streamlit as st
 import gspread
 # import time
 
-# set sidebar initial state + dummy placeholder content
+# set sidebar initial state
 st.set_page_config(
     initial_sidebar_state="expanded")
 
