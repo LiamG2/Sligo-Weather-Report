@@ -26,15 +26,18 @@ public_sheet = gApiKey.open_by_url(
 # convert gspread output to plain string
 today_Wthr = str((public_sheet.sheet1.get('A5')))
 tonight_Wthr = str((public_sheet.sheet1.get('A8')))
+tomorrow_Wthr = str((public_sheet.sheet1.get('A8')))
 
 # remove unnecessary chars [ ] ' from both string's ends
 today_Wthr = today_Wthr.strip("[]'")
 tonight_Wthr = tonight_Wthr.strip("[]'")
+tomorrow_Wthr = tomorrow_Wthr.strip("[]'")
 
 # remove substring '\n' from string - note the extra \ needed in \\n
 # SEE >> https://stackoverflow.com/questions/42143302/how-can-i-remove-a-newline-character-in-a-string-in-python
 today_Wthr = today_Wthr.replace('\\n', '')
 tonight_Wthr = tonight_Wthr.replace('\\n', '')
+tomorrow_Wthr = tomorrow_Wthr.replace('\\n', '')
 
 st.title("Sligo Weather")
 st.write(" ")
@@ -43,3 +46,7 @@ st.write(today_Wthr)
 st.write(" ")
 st.write("### Tonight")
 st.write(tonight_Wthr)
+st.write(" ")
+st.write("### Tomorrow")
+st.write(tomorrow_Wthr)
+
