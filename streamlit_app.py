@@ -3,6 +3,9 @@ import gspread
 from streamlit_lottie import st_lottie
 # import time
 
+lottie_polyfox_1 = ('https://raw.githubusercontent.com/LiamG2/Sligo-Weather-Report/refs/heads/main/file.json') # PEP-8 Length N/A
+
+
 # set sidebar initial state
 st.set_page_config(
     initial_sidebar_state="expanded"
