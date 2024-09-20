@@ -7,12 +7,10 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-
 add_selectbox = st.sidebar.selectbox(
     "How would you like to be contacted?",
     ("Email", "Home phone", "Mobile phone")
 )
-
 
 # link to test GSheet >> https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdaoJDI0fnqIHA/edit?usp=sharing
 
@@ -26,16 +24,16 @@ public_sheet = gApiKey.open_by_url(
     'https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdaoJDI0fnqIHA/edit?usp=sharing')
 
 # convert gspread output to plain string
-cellContents = str((public_sheet.sheet1.get('A5')))
+today_Wthr = str((public_sheet.sheet1.get('A5')))
 
 # remove unnecessary chars [ ] ' from both string's ends
-cellContents = cellContents.strip("[]'")
+today_Wthr = today_Wthr.strip("[]'")
 
 # remove substring '\n' from string - note the extra \ needed in \\n
 # SEE >> https://stackoverflow.com/questions/42143302/how-can-i-remove-a-newline-character-in-a-string-in-python
-cellContents = cellContents.replace('\\n', '')
+today_Wthr = today_Wthr.replace('\\n', '')
 
 st.title("Sligo Weather")
 st.write()
 st.write("### Today's weather for both Sligo and the rest of Connacht")
-st.write(cellContents)
+st.write(today_Wthr)
