@@ -4,7 +4,7 @@ import gspread
 
 # set sidebar initial state + dummy placeholder content
 st.set_page_config(
-    initial_sidebar_state="expanded",)
+    initial_sidebar_state="expanded")
 '''
     menu_items={
         'Get Help': 'https://www.extremelycoolapp.com/help',
