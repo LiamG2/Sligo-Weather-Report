@@ -4,7 +4,8 @@ import gspread
 
 # set sidebar initial state
 st.set_page_config(
-    initial_sidebar_state="expanded")
+    initial_sidebar_state="expanded"
+)
 
 
 add_selectbox = st.sidebar.selectbox(
