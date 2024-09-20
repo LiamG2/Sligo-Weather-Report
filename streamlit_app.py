@@ -5,11 +5,13 @@ import gspread
 # set sidebar initial state + dummy placeholder content
 st.set_page_config(
     initial_sidebar_state="expanded",
+    '''
     menu_items={
         'Get Help': 'https://www.extremelycoolapp.com/help',
         'Report a bug': "https://www.extremelycoolapp.com/bug",
         'About': "# This is a header. This is an *extremely* cool app!"
     }
+    '''
 )
 
 add_selectbox = st.sidebar.selectbox(
