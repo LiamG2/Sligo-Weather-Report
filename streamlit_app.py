@@ -3,7 +3,7 @@ import gspread
 from streamlit_lottie import st_lottie
 # import time
 
-lottie_polyfox_1 = ('https://raw.githubusercontent.com/LiamG2/Sligo-Weather-Report/refs/heads/main/file.json') # PEP-8 Length N/A
+x = ('https://raw.githubusercontent.com/LiamG2/Sligo-Weather-Report/refs/heads/main/file.json') # PEP-8 Length N/A
 
 # set sidebar initial state
 st.set_page_config(
@@ -12,7 +12,7 @@ st.set_page_config(
 
 # method for adding widgets/lotties to sidebar
 with st.sidebar:
-    st_lottie(lottie_polyfox_1, height=200, key='polyfox_1')
+    st_lottie(x, height=200, key='x_1')
     # note different 'key' name above, needed when using same animation
     # \multiple times
 
