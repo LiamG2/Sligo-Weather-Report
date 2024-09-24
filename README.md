@@ -8,7 +8,7 @@ Deployed, running reliably, and hosted for free at >> https://sligo-weather-repo
 
 $^{Note\ to\ self:\ Do\ NOT\ rename\ this\ repo\ if\ still\ using\ Streamlit\ -\ it\ won't\ like\ that.}$
 
-Currently scrapes data from https://www.met.ie/ - which unfortunately does not provide short, text-only weather reports for individual towns. Sligo sits on the border between two provinces, Connacht and Ulster. I could have added both provinces but having just the one makes it less confusing; I chose Connacht. Completely *re-inventing-the-wheel* here, but it works, and I'm proud of it :)
+Currently scrapes data from https://www.met.ie/connacht-forecast.html - which unfortunately does not provide short, text-only weather reports for individual towns. Sligo sits on the border between two provinces, Connacht and Ulster. I could have added both provinces but having just the one makes it less confusing; I chose Connacht. Completely *re-inventing-the-wheel* here, but it works, and I'm proud of it :)
 
 
 <!---
