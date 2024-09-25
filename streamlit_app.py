@@ -38,7 +38,7 @@ def clean_gspread_output(data):
     return data
 
 # Function to fetch data from Google Sheets and cache it
-@st.cache_data(ttl=3600)  # Cache the data for 1 hour (ttl in seconds)
+@st.cache_resource(ttl=3600)  # Cache the data for 1 hour (ttl in seconds)
 def fetch_weather_data():
     gApiKey = gspread.service_account("path_to_service_account.json")  # Use your service account path
     public_sheet = gApiKey.open_by_url(
