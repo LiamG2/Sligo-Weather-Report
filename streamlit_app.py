@@ -16,6 +16,9 @@ with st.sidebar:
     # note different 'key' name above, needed when using same animation
     # \multiple times
 
+with st.sidebar:
+    st.write('"_Beep, Boop . . . A python-only web-scraping Bot created by CADNurd_"')
+
 
 # link to test GSheet >> https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdaoJDI0fnqIHA/edit?usp=sharing
 
