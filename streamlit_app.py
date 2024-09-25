@@ -42,6 +42,7 @@ tomorrow_Wthr = tomorrow_Wthr.strip("[]'")
 
 # remove substring '\n' from string - note the extra \ needed in \\n
 # SEE >> https://stackoverflow.com/questions/42143302/how-can-i-remove-a-newline-character-in-a-string-in-python
+today_Date = today_Date.replace('\\n', '')
 today_Wthr = today_Wthr.replace('\\n', '')
 tonight_Wthr = tonight_Wthr.replace('\\n', '')
 tomorrow_Wthr = tomorrow_Wthr.replace('\\n', '')
