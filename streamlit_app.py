@@ -40,14 +40,10 @@ def clean_gspread_output(data):
 # Applies the function to the relevant data
 # @st.cache_resource(ttl=3600) # caching decorator with adjustable ttl
 def create_global_vars():
-    global today_Date
-    today_Date = clean_gspread_output(public_sheet.sheet1.get('A4'))
-    global today_Wthr
-    today_Wthr = clean_gspread_output(public_sheet.sheet1.get('A5'))
-    global tonight_Wthr
-    tonight_Wthr = clean_gspread_output(public_sheet.sheet1.get('A8'))
-    global tomorrow_Wthr
-    tomorrow_Wthr = clean_gspread_output(public_sheet.sheet1.get('A11'))
+    global today_Date = clean_gspread_output(public_sheet.sheet1.get('A4'))
+    global today_Wthr = clean_gspread_output(public_sheet.sheet1.get('A5'))
+    global tonight_Wthr = clean_gspread_output(public_sheet.sheet1.get('A8'))
+    global tomorrow_Wthr = clean_gspread_output(public_sheet.sheet1.get('A11'))
     return
 
 # time.sleep(3)
