@@ -51,8 +51,9 @@ def create_global_vars():
     tomorrow_Wthr = clean_gspread_output(public_sheet.sheet1.get('A11'))
     return
 
-create_global_vars()
 time.sleep(3)
+
+create_global_vars()
 
 # Final output to webpage/app
 st.title("Sligo Weather Report")
