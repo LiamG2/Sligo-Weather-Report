@@ -31,7 +31,7 @@ def gApiKey(data):
     data = gspread.api_key("AIzaSyDpIvMkGb2WdHQC5xT1MHmefJZ7c3HRmlY")
     return data
 
-gApiKey()
+gApiKey(data)
 
 public_sheet = gApiKey.open_by_url(
     'https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdaoJDI0fnqIHA/edit?usp=sharing')
