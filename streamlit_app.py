@@ -66,7 +66,7 @@ tomorrow_Wthr = clean_gspread_output(public_sheet.sheet1.get('A11'))
 
 
 st.title("Sligo Weather Report")
-st.write("##### _( Today's weather - for both Sligo and the rest of Connacht )_")
+st.write("_Today's weather - for both Sligo and the rest of Connacht_")
 st.write(" ")
 # st.write("### + today_Date")
 st.write(f"### {today_Date}")
