@@ -39,7 +39,7 @@ def clean_gspread_output(data):
 
 # Applies the function to the relevant data
 @st.cache_data(ttl=3600) # caching decorator with adjustable ttl
-def create_global_vars(data):
+def create_global_vars():
     global today_Date
     today_Date = clean_gspread_output(public_sheet.sheet1.get('A4'))
     global today_Wthr
@@ -48,9 +48,9 @@ def create_global_vars(data):
     tonight_Wthr = clean_gspread_output(public_sheet.sheet1.get('A8'))
     global tomorrow_Wthr
     tomorrow_Wthr = clean_gspread_output(public_sheet.sheet1.get('A11'))
-    return data
+    return
 
-create_global_vars(data)
+create_global_vars()
 
 # Final output to webpage/app
 st.title("Sligo Weather Report")
