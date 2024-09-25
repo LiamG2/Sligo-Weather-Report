@@ -46,7 +46,7 @@ tomorrow_Wthr = tomorrow_Wthr.replace('\\n', '')
 
 st.title("Sligo Weather")
 st.write(" ")
-st.write("#### Today's weather - for both Sligo and the rest of Connacht")
+st.write("#### _Today's weather - for both Sligo and the rest of Connacht_")
 st.write(today_Wthr)
 st.write(" ")
 st.write("### Tonight")
