@@ -40,6 +40,7 @@ def create_global_vars():
         st.error(f"Error fetching data from the sheet: {e}")
         st.stop()  # Stop if fetching the data fails
 
+time.sleep(3)
 create_global_vars()
 
 # Final output to webpage/app
