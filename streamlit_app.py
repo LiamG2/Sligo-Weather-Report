@@ -35,6 +35,7 @@ public_sheet = gApiKey.open_by_url(
 # # convert gspread output to plain string
 # # remove unnecessary chars [ ] ' from both string's ends
 # # remove newline \n chars - note double \\ needed - SEE >> https://stackoverflow.com/questions/42143302/how-can-i-remove-a-newline-character-in-a-string-in-python
+@st.cache_data(ttl=3600) # caching decorator with adjustable ttl
 def clean_gspread_output(data):
     data = str(data).strip("[]'").replace('\\n', '')
     return data
