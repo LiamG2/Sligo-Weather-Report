@@ -31,7 +31,6 @@ public_sheet = gApiKey.open_by_url(
 # # remove unnecessary chars [ ] ' from both string's ends
 # # remove newline \n chars - note double \\ needed - SEE >> https://stackoverflow.com/questions/42143302/how-can-i-remove-a-newline-character-in-a-string-in-python
 def clean_gspread_output(data):
-    # Convert list-like output to string and remove unnecessary characters
     data = str(data).strip("[]'").replace('\\n', '')
     return data
 
@@ -41,6 +40,7 @@ today_Wthr = clean_gspread_output(public_sheet.sheet1.get('A5'))
 tonight_Wthr = clean_gspread_output(public_sheet.sheet1.get('A8'))
 tomorrow_Wthr = clean_gspread_output(public_sheet.sheet1.get('A11'))
 
+# Final output to webpage/app
 st.title("Sligo Weather Report")
 st.write("##### _( Today's weather - for both Sligo and the rest of Connacht )_")
 st.write(" ")
