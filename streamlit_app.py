@@ -15,6 +15,9 @@ with st.sidebar:
     # note different 'key' name above, needed when using same animation
     # \multiple times
 
+with st.sidebar:
+    st.write("text goes here")
+
 # link to test GSheet >> https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdaoJDI0fnqIHA/edit?usp=sharing
 
 # Following instructions from >> https://docs.gspread.org/en/v6.1.2/oauth2.html#enable-api-access
