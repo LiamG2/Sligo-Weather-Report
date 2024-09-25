@@ -1,7 +1,6 @@
 import streamlit as st
 import gspread
 from streamlit_lottie import st_lottie
-import time
 
 x = ('https://raw.githubusercontent.com/LiamG2/Sligo-Weather-Report/refs/heads/main/file.json') # PEP-8 Length N/A
 
