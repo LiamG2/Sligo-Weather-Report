@@ -16,7 +16,7 @@ with st.sidebar:
     # \multiple times
 
 with st.sidebar:
-    st.write("_Beep, Boop . . . A python-only web-scraping bot created by CADNurd_")
+    st.write('"_Beep, Boop . . . A python-only web-scraping Bot created by CADNurd_"')
 
 # "Beep, Boop . . . A python-only web-scraping bot created by CADNurd"
 
