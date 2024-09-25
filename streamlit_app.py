@@ -18,20 +18,13 @@ with st.sidebar:
 with st.sidebar:
     st.write('"_Beep, Boop . . . A python-only web-scraping Bot created by CADNurd_"')
 
-# "Beep, Boop . . . A python-only web-scraping bot created by CADNurd"
-
 # link to test GSheet >> https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdaoJDI0fnqIHA/edit?usp=sharing
 
 # Following instructions from >> https://docs.gspread.org/en/v6.1.2/oauth2.html#enable-api-access
 #   Relevant project set-up on Google Developers Console >> https://console.cloud.google.com/apis/credentials?project=opportune-geode-435020-g8
 #   Generated API Key from above project >> AIzaSyDpIvMkGb2WdHQC5xT1MHmefJZ7c3HRmlY
 
-@st.cache_data(ttl=3600)
-def gApiKey(data):
-    data = gspread.api_key("AIzaSyDpIvMkGb2WdHQC5xT1MHmefJZ7c3HRmlY")
-    return data
-
-gApiKey(data)
+gApiKey = gspread.api_key("AIzaSyDpIvMkGb2WdHQC5xT1MHmefJZ7c3HRmlY")
 
 public_sheet = gApiKey.open_by_url(
     'https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdaoJDI0fnqIHA/edit?usp=sharing')
@@ -40,16 +33,23 @@ public_sheet = gApiKey.open_by_url(
 # # convert gspread output to plain string
 # # remove unnecessary chars [ ] ' from both string's ends
 # # remove newline \n chars - note double \\ needed - SEE >> https://stackoverflow.com/questions/42143302/how-can-i-remove-a-newline-character-in-a-string-in-python
-@st.cache_data(ttl=3600) # caching decorator with adjustable ttl
+# @st.cache_data(ttl=3600) # caching decorator with adjustable ttl
 def clean_gspread_output(data):
     data = str(data).strip("[]'").replace('\\n', '')
     return data
 
 # Applies the function to the relevant data
-today_Date = clean_gspread_output(public_sheet.sheet1.get('A4'))
-today_Wthr = clean_gspread_output(public_sheet.sheet1.get('A5'))
-tonight_Wthr = clean_gspread_output(public_sheet.sheet1.get('A8'))
-tomorrow_Wthr = clean_gspread_output(public_sheet.sheet1.get('A11'))
+def create_global_vars():
+    global today_Date
+    today_Date = clean_gspread_output(public_sheet.sheet1.get('A4'))
+    global today_Wthr
+    today_Wthr = clean_gspread_output(public_sheet.sheet1.get('A5'))
+    global tonight_Wthr
+    tonight_Wthr = clean_gspread_output(public_sheet.sheet1.get('A8'))
+    global tomorrow_Wthr
+    tomorrow_Wthr = clean_gspread_output(public_sheet.sheet1.get('A11'))
+
+create_global_vars()
 
 # Final output to webpage/app
 st.title("Sligo Weather Report")
