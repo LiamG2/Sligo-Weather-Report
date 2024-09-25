@@ -28,6 +28,7 @@ gApiKey = gspread.api_key("AIzaSyDpIvMkGb2WdHQC5xT1MHmefJZ7c3HRmlY")
 public_sheet = gApiKey.open_by_url(
     'https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdaoJDI0fnqIHA/edit?usp=sharing')
 
+'''
 # convert gspread output to plain string
 today_Date = str((public_sheet.sheet1.get('A4')))
 today_Wthr = str((public_sheet.sheet1.get('A5')))
@@ -46,6 +47,19 @@ today_Date = today_Date.replace('\\n', '')
 today_Wthr = today_Wthr.replace('\\n', '')
 tonight_Wthr = tonight_Wthr.replace('\\n', '')
 tomorrow_Wthr = tomorrow_Wthr.replace('\\n', '')
+'''
+# String conversion/cleaning function
+def clean_gspread_output(data):
+    # Convert list-like output to string and remove unnecessary characters
+    data = str(data).strip("[]'").replace('\\n', '')
+    return data
+
+# Applies the function to the relevant data
+today_Date = clean_gspread_output(public_sheet.sheet1.get('A4'))
+today_Wthr = clean_gspread_output(public_sheet.sheet1.get('A5'))
+tonight_Wthr = clean_gspread_output(public_sheet.sheet1.get('A8'))
+tomorrow_Wthr = clean_gspread_output(public_sheet.sheet1.get('A11'))
+
 
 st.title("Sligo Weather Report")
 st.write("##### _( Today's weather - for both Sligo and the rest of Connacht )_")
