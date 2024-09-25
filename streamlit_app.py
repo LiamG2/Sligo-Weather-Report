@@ -24,10 +24,10 @@ with st.sidebar:
 #   Relevant project set-up on Google Developers Console >> https://console.cloud.google.com/apis/credentials?project=opportune-geode-435020-g8
 #   Generated API Key from above project >> AIzaSyDpIvMkGb2WdHQC5xT1MHmefJZ7c3HRmlY
 
-gApiKey = gspread.api_key("AIzaSyDpIvMkGb2WdHQC5xT1MHmefJZ7c3HRmlY")
+# gApiKey = gspread.api_key("AIzaSyDpIvMkGb2WdHQC5xT1MHmefJZ7c3HRmlY")
 
-public_sheet = gApiKey.open_by_url(
-    'https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdaoJDI0fnqIHA/edit?usp=sharing')
+# public_sheet = gApiKey.open_by_url(
+#     'https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdaoJDI0fnqIHA/edit?usp=sharing')
 
 # String conversion/cleaning function, which combines...
 # # convert gspread output to plain string
@@ -37,15 +37,23 @@ def clean_gspread_output(data):
     data = str(data).strip("[]'").replace('\\n', '')
     return data
 
-# Applies the function to the relevant data
-# @st.cache_resource(ttl=3600) # caching decorator with adjustable ttl
+# Function to fetch data from Google Sheets and cache it
+@st.cache_data(ttl=3600)  # Cache the data for 1 hour (ttl in seconds)
+def fetch_weather_data():
+    gApiKey = gspread.service_account("path_to_service_account.json")  # Use your service account path
+    public_sheet = gApiKey.open_by_url(
+        'https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdaoJDI0fnqIHA/edit?usp=sharing')
 
-today_Date = clean_gspread_output(public_sheet.sheet1.get('A4'))
-today_Wthr = clean_gspread_output(public_sheet.sheet1.get('A5'))
-tonight_Wthr = clean_gspread_output(public_sheet.sheet1.get('A8'))
-tomorrow_Wthr = clean_gspread_output(public_sheet.sheet1.get('A11'))
+    # Fetch the data from the sheet
+    today_Date = clean_gspread_output(public_sheet.sheet1.get('A4'))
+    today_Wthr = clean_gspread_output(public_sheet.sheet1.get('A5'))
+    tonight_Wthr = clean_gspread_output(public_sheet.sheet1.get('A8'))
+    tomorrow_Wthr = clean_gspread_output(public_sheet.sheet1.get('A11'))
 
+    return today_Date, today_Wthr, tonight_Wthr, tomorrow_Wthr
 
+# Fetch the weather data (this will be cached)
+today_Date, today_Wthr, tonight_Wthr, tomorrow_Wthr = fetch_weather_data()
 
 # Final output to webpage/app
 st.title("Sligo Weather Report")
