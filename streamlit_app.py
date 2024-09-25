@@ -20,10 +20,6 @@ with st.sidebar:
 
 # "Beep, Boop . . . A python-only web-scraping bot created by CADNurd"
 
-GitHub link on the top-right leads to underlying repo.
-
-The latest text weather-report(s) taken from www.met.ie
-
 # link to test GSheet >> https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdaoJDI0fnqIHA/edit?usp=sharing
 
 # Following instructions from >> https://docs.gspread.org/en/v6.1.2/oauth2.html#enable-api-access
