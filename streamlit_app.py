@@ -27,10 +27,11 @@ with st.sidebar:
 #   Generated API Key from above project >> AIzaSyDpIvMkGb2WdHQC5xT1MHmefJZ7c3HRmlY
 
 @st.cache_data(ttl=3600)
-def get_gApiKey():
-    gApiKey = gspread.api_key("AIzaSyDpIvMkGb2WdHQC5xT1MHmefJZ7c3HRmlY")
+def gApiKey(data):
+    data = gspread.api_key("AIzaSyDpIvMkGb2WdHQC5xT1MHmefJZ7c3HRmlY")
+    return data
 
-get_gApiKey()
+gApiKey()
 
 public_sheet = gApiKey.open_by_url(
     'https://docs.google.com/spreadsheets/d/1pkysi4rP3zsl20GWUp_HFg3CRg44BXdaoJDI0fnqIHA/edit?usp=sharing')
