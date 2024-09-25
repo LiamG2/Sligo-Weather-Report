@@ -1,9 +1,10 @@
 import streamlit as st
 import gspread
 from streamlit_lottie import st_lottie
-# import time
 
-x = ('https://raw.githubusercontent.com/LiamG2/Sligo-Weather-Report/refs/heads/main/file.json') # PEP-8 Length N/A
+# Ignoring PEP 8, 80 char line limit for comments and URLs
+
+x = ('https://raw.githubusercontent.com/LiamG2/Sligo-Weather-Report/refs/heads/main/file.json')
 
 # set sidebar initial state
 st.set_page_config(
@@ -13,8 +14,7 @@ st.set_page_config(
 # method for adding widgets/lotties to sidebar
 with st.sidebar:
     st_lottie(x, height=200, key='x_1')
-    # note different 'key' name above, needed when using same animation
-    # \multiple times
+    # note different 'key' name above, needed when using same animation multiple times
 
 with st.sidebar:
     st.write('"_Beep, Boop . . . A python-only web-scraping bot created by CADNurd_"')
