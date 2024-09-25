@@ -35,6 +35,7 @@ tonight_Wthr = str((public_sheet.sheet1.get('A8')))
 tomorrow_Wthr = str((public_sheet.sheet1.get('A11')))
 
 # remove unnecessary chars [ ] ' from both string's ends
+today_Date = today_Date.strip("[]'")
 today_Wthr = today_Wthr.strip("[]'")
 tonight_Wthr = tonight_Wthr.strip("[]'")
 tomorrow_Wthr = tomorrow_Wthr.strip("[]'")
