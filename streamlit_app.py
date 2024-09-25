@@ -38,7 +38,7 @@ def clean_gspread_output(data):
     return data
 
 # Applies the function to the relevant data
-# @st.cache_data(ttl=3600) # caching decorator with adjustable ttl
+@st.cache_resource(ttl=3600) # caching decorator with adjustable ttl
 def create_global_vars():
     global today_Date
     today_Date = clean_gspread_output(public_sheet.sheet1.get('A4'))
