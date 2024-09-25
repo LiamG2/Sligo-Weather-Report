@@ -2,7 +2,7 @@ import streamlit as st
 import gspread
 from streamlit_lottie import st_lottie
 
-# Ignoring PEP 8, 80 char line limit for comments and URLs
+# Ignoring PEP 8, 80 char line limit for both comments and URLs
 
 x = ('https://raw.githubusercontent.com/LiamG2/Sligo-Weather-Report/refs/heads/main/file.json')
 
