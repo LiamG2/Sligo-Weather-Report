@@ -43,6 +43,7 @@ def clean_gspread_output(data):
 
 # Applies the function to the relevant data
 today_Date = clean_gspread_output(public_sheet.sheet1.get('A4'))
+tomorrow_Date = clean_gspread_output(public_sheet.sheet1.get('A10'))
 today_Wthr = clean_gspread_output(public_sheet.sheet1.get('A5'))
 tonight_Wthr = clean_gspread_output(public_sheet.sheet1.get('A8'))
 tomorrow_Wthr = clean_gspread_output(public_sheet.sheet1.get('A11'))
@@ -57,5 +58,6 @@ st.write(" ")
 st.write("### TONIGHT")
 st.write(tonight_Wthr)
 st.write(" ")
-st.write("### TOMORROW")
+st.write(f"### {tomorrow_Date}")
+# st.write("### TOMORROW")
 st.write(tomorrow_Wthr)
