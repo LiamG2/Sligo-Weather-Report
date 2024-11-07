@@ -38,7 +38,7 @@ public_sheet = gApiKey.open_by_url(
 #     remove substring '\n' from string - note the extra \ needed in \\n
 #         SEE >> https://stackoverflow.com/questions/42143302/how-can-i-remove-a-newline-character-in-a-string-in-python
 def clean_gspread_output(data):
-    data = str(data).strip("[]'").replace('\\n', '')
+    data = str(data).strip("['").replace('\\n', '')
     return data
 
 # Applies the function to the relevant data
